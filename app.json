@@ -5,6 +5,18 @@
       "bundler": "metro"
     },
     "name": "WhatsGoodTrois",
-    "slug": "WhatsGoodTrois"
+    "slug": "WhatsGoodTrois",
+    "extra": {
+      "eas": {
+        "projectId": "e7b2dada-c526-4d35-bae5-216888dc372b"
+      }
+    },
+    "owner": "katcondev",
+    "android": {
+      "package": "com.katcondev.WhatsGoodTrois"
+    },
+    "ios": {
+      "bundleIdentifier": "com.katcondev.WhatsGoodTrois"
+    }
   }
 }
