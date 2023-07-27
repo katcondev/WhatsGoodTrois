@@ -1,66 +1,30 @@
-import { StyleSheet, Text, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import React from "react";
+import { Text, View, TouchableOpacity, Button } from "react-native";
+import commonStyles from "./styles";
+import { useNavigation } from "@react-navigation/native"; // Import the useNavigation hook
+import { createStackNavigator } from "@react-navigation/stack";
+import LibRoster from "./libations"; // Import the LibRoster component
 
-export default function Page() {
+const App = createStackNavigator();
+
+export default function Home() {
+  const navigation = useNavigation(); // Get the navigation object
+
   const handleSayLess = () => {
-    //handle "say less" button to press logic
-    console.log("Bet!");
+    // Navigate to the LibRoster screen
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.main}>
-        <Text style={styles.title}>What's Good?</Text>
-        <Text style={styles.subtitle}>
+    <View style={commonStyles.container}>
+      <View style={commonStyles.main}>
+        <Text style={commonStyles.title}>What's Good?</Text>
+        <Text style={commonStyles.subtitle}>
           Sippin' & Chillin', All Love, No Drama!
         </Text>
-        <TouchableOpacity onPress={handleSayLess} style={styles.button}>
-          <Text style={styles.buttonText}>Say Less</Text>
+        <TouchableOpacity onPress={handleSayLess} style={commonStyles.button}>
+          <Text style={commonStyles.buttonText}>Say Less</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    padding: 24,
-    backgroundColor: "#A6882F",
-  },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
-  },
-  title: {
-    fontSize: 68,
-    fontWeight: "bold",
-    color: "#F2D98D",
-  },
-  subtitle: {
-    fontSize: 32,
-    color: "#F2D98D",
-  },
-  buttonText: {
-    color: "#",
-    fontSize: 16,
-    fontWeight: "bold",
-    textTransform: "uppercase",
-    color: "#F2D98D",
-  },
-  button: {
-    backgroundColor: "#A6882F",
-    borderColor: "#F2D98D",
-    borderWidth: 1,
-    marginTop: 30,
-    width: 100,
-    height: 40,
-    borderRadius: 5,
-    marginVertical: 10,
-    justifyContent: "center", // Align the text vertically in the button
-    alignItems: "center", //align the text horinzontally in the button
-  },
-});
