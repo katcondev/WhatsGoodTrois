@@ -14,13 +14,14 @@ const commonStyles = StyleSheet.create({
     marginHorizontal: "auto",
   },
   title: {
-    fontSize: 68,
+    fontSize: 40,
     fontWeight: "bold",
     color: "#F2D98D",
   },
   subtitle: {
-    fontSize: 32,
+    fontSize: 20,
     color: "#F2D98D",
+    paddingTop: 20,
   },
   buttonText: {
     color: "#",

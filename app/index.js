@@ -1,15 +1,12 @@
-import React from "react";
-import { Text, View, TouchableOpacity, Button } from "react-native";
-import commonStyles from "./styles";
+import { Text, View, TouchableOpacity } from "react-native";
+import commonStyles from "./components/styles";
+import { Link } from "expo-router";
 
-import LibRoster from "./libations"; // Import the LibRoster component
-
-export default function Home() {
+const Home = () => {
   const handleSayLess = () => {
     // Navigate to the LibRoster screen
     console.log("bet!");
   };
-
   return (
     <View style={commonStyles.container}>
       <View style={commonStyles.main}>
@@ -17,10 +14,15 @@ export default function Home() {
         <Text style={commonStyles.subtitle}>
           Sippin' & Chillin', All Love, No Drama!
         </Text>
-        <TouchableOpacity onPress={handleSayLess} style={commonStyles.button}>
-          <Text style={commonStyles.buttonText}>Say Less</Text>
+
+        <TouchableOpacity style={commonStyles.button}>
+          <Link href='/libations'>
+            <Text style={commonStyles.buttonText}>Say Less</Text>
+          </Link>
         </TouchableOpacity>
       </View>
     </View>
   );
-}
+};
+
+export default Home;
