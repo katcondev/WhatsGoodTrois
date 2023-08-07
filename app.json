@@ -17,6 +17,9 @@
     },
     "ios": {
       "bundleIdentifier": "com.katcondev.WhatsGoodTrois"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
