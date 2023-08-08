@@ -15,7 +15,6 @@ const LibRoster = () => {
           'What's Good?' offers a delightful range of beverages perfect for any
           occasion.
         </Text>
-
         <TouchableOpacity style={commonStyles.button}>
           <Link href='/'>
             <Text style={commonStyles.buttonText}>Home</Text>
